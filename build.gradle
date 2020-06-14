@@ -1,4 +1,4 @@
-  
+
 buildscript {
     ext {
         springBootVersion = '2.1.1.RELEASE'
@@ -26,14 +26,14 @@ sourceCompatibility = 11
 compileJava.options.encoding = "UTF-8"
 
 configurations {
-	developmentOnly
-	runtimeClasspath {
-		extendsFrom developmentOnly
-	}
+  developmentOnly
+  runtimeClasspath {
+    extendsFrom developmentOnly
+  }
 }
 
 repositories {
-	mavenCentral()
+  mavenCentral()
 }
 
 dependencies {
@@ -49,9 +49,10 @@ dependencies {
     testImplementation('org.junit.jupiter:junit-jupiter-params:5.2.0')
     testImplementation('org.junit.jupiter:junit-jupiter-engine:5.2.0')
     testImplementation('org.junit.platform:junit-platform-commons:1.5.2')
+    testRuntimeOnly ('org.junit.platform:junit-platform-launcher')
     testImplementation('org.mockito:mockito-core:2.21.0')
     testImplementation('org.mockito:mockito-junit-jupiter:2.21.0')
-    
+
 }
-	
+
 
